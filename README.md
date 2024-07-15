@@ -1,0 +1,3 @@
+# DeshBhaktHighSchoolProject
+
+This project is basically building a real time website for the Desh Bhakt High School. This website is typically build as per the school's requirements. I have used mysql query language for backend with php as a server side scripting language. For frontend I have used html, CSS and Bootstrap framework for creating user friendly UI. All the data visible on the UI is dynamic and there is a respective admin panel to upload data on frontend. Also there exist a parents feedback system, this feedback will be visible only to the admin panel.
