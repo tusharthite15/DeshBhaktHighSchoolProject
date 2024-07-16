@@ -212,10 +212,10 @@ if(mysqli_num_rows($select_contact) > 0){
     
       <div class="row mb-5 justify-content-center">
         <div class="col-lg-5 mx-auto order-1" data-aos="fade-up" data-aos-delay="200">
-          <form action="#" class="form-box registerbox" method="POST">
+          <form action="" class="form-box registerbox" method="POST">
           
           <div class="button-container">
-  <button class="btn1 btn-primary">Student</button>
+  <button class="btn1 btn-primary"><a href="register.php">Student</a></button>
   <button class="btn1 btn-primary"><a href="admin_login.php">Admin</a></button>
 </div>
 

@@ -154,7 +154,7 @@
         <div class="col-lg-4 mb-5 mb-lg-0">
 
           <div class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">
-            <h2 class="line-bottom mb-4">Chairman</h2>
+            <h2 class="line-bottom mb-4">President</h2>
           </div>
 
           <p data-aos="fade-up" data-aos-delay="100">I feel, an institution can not be created single handedly or without any devotion or guidance. I must say that this was only possible due to team work of ‘Ghali Family’ under the esteemed officials.
@@ -175,7 +175,7 @@ We have been considering all aspects of child development and tried its best to 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
           <figure class="img-wrap-2">
             <img
-              src="https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2022/02/16072208/IAS-Vineet-Joshi-Know-about-IAS-Vineet-Joshi-who-once.jpeg"
+              src="./images/President/PRESIDENT.JPEG"
               alt="Image" class="img-fluid img-size">
             <div class="dotted"></div>
           </figure>

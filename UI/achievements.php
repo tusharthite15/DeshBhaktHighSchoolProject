@@ -84,7 +84,7 @@ if(mysqli_num_rows($select_contact) > 0){
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
-          <a href="index.html" class="logo menu-absolute m-0"><img src="./images/DeshBhakt.png" alt="logo" class="logoM"><span class="text-primary"></span></a>
+          <a href="index.php" class="logo menu-absolute m-0"><img src="./images/DeshBhakt.png" alt="logo" class="logoM"><span class="text-primary"></span></a>
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
             <li><a href="index.php">Home</a></li>
