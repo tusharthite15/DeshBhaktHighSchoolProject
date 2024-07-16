@@ -1,5 +1,29 @@
 <?php
 @include 'config.php';
+
+// Define how many results you want per page
+$results_per_page = 5; 
+
+// Find out the number of results stored in database
+$result = mysqli_query($link, "SELECT COUNT(id) AS total FROM `news`");
+$row = mysqli_fetch_assoc($result);
+$total_results = $row['total'];
+
+// Determine number of total pages available
+$total_pages = ceil($total_results / $results_per_page);
+
+// Determine which page number visitor is currently on
+if (!isset($_GET['page'])) {
+    $page = 1;
+} else {
+    $page = $_GET['page'];
+}
+
+// Determine the SQL LIMIT starting number for the results on the displaying page
+$start_limit = ($page - 1) * $results_per_page;
+
+// Retrieve selected results from database and display them on page
+$select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMIT $start_limit, $results_per_page");
 ?>
 <!doctype html>
 <html lang="en">
@@ -282,7 +306,7 @@
           </ul>
         </div>
       </div>
-
+1
     </div>
   </div>
   </div> <!-- /.untree_co-section -->
