@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>DRK Highschool | News</title>
 
 
@@ -171,30 +173,57 @@ if(mysqli_num_rows($select_contact) > 0){
 
   
 
-  <div class="untree_co-hero overlay" style="background-image: url('images/img-school-6-min.jpg');">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-12">
-          <div class="row justify-content-center ">
-            <div class="col-lg-6 text-center ">
-              <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">News & Announcements</h1>
-              <div class="mb-5 text-white desc mx-auto" data-aos="fade-up" data-aos-delay="200">
-                <p>Here you'll find the latest announcements, events, and updates from the school community </p>
-                <a href="#newsinfo" class="btn btn-secondary">Explore News</a> </div>
-              
-
-             
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/20220626_094437.jpg');">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+              <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                  <h1 class="mb-4 heading text-white">
+                    <span id="typed-text"></span>
+                  </h1>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                      var typed = new Typed('#typed-text', {
+                        strings: ['Deshbhakt Ratnappa Kumbhar Highschool'],
+                        typeSpeed: 50,
+                        backSpeed: 20,
+                        startDelay: 500,
+                        backDelay: 1500,
+                        loop: false,
+                      });
+                    });
+                  </script>
+                  <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#info"
+                      class="btn btn-secondary">Explore</a></p>
+                </div>
+              </div>
             </div>
-
-
           </div>
-
         </div>
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-
-  </div> <!-- /.untree_co-hero -->
+      </div>
+      <!-- Add more swiper-slide divs for additional images -->
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/20220814_085709.jpg');">
+      </div>
+      <div class="swiper-slide untree_co-hero overlay" style="background-image: url('images/HERO_IMAGES/HERO-1.jpg');">
+      </div>
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/IMG-20220506-WA0057.jpg');">
+      </div>
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/IMG-20240413-WA0037.jpg');">
+      </div>
+    </div>
+    <!-- Add Pagination if needed -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation if needed -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 
 
 
@@ -317,7 +346,38 @@ if(mysqli_num_rows($select_news) > 0){
     <script src="js/jquery.sticky.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+      });
 
-  </body>
+      var typed = new Typed('#typed-text', {
+        strings: ['Deshbhakt Ratnappa Kumbhar Highschool'],
+        typeSpeed: 50,
+        backSpeed: 20,
+        startDelay: 500,
+        backDelay: 1500,
+        loop: false,
+      });
+    });
+  </script>
 
-  </html>
+</body>
+
+</html>

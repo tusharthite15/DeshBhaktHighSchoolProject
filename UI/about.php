@@ -1,9 +1,4 @@
-<!-- /*
-* Template Name: Learner
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+
 <?php
 @include 'config.php';
 ?>
@@ -35,6 +30,9 @@
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <title>DRK Highschool | About</title>
 </head>
@@ -118,32 +116,59 @@
     </div>
   </nav>
 
-
-  <div class="untree_co-hero overlay" style="background-image: url('images/img-school-1-min.jpg');">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-12">
-          <div class="row justify-content-center ">
-            <div class="col-lg-6 text-center ">
-              <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">About Us</h1>
-              <div class="mb-5 text-white desc mx-auto" data-aos="fade-up" data-aos-delay="200">
-                <p>Welcome to Deshbhakt Ratnappa Kumbhar High School R K Nagar Pachgaon , that has been established not only to provide education but also to enable each student to emerge on the top his/her career. I strongly believe that true education teaches the valuable virtues of self-knowledge, self-control and self-confidence”.</p>
-
-                  <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#aboutinfo" class="btn btn-secondary">Explore</a></p>
-
+  
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide untree_co-hero overlay"
+      style="background-image: url('images/HERO_IMAGES/20220626_094437.jpg');">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h1 class="mb-4 heading text-white">
+                  <span id="typed-text"></span>
+                </h1>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                      var typed = new Typed('#typed-text', {
+                        strings: ['Deshbhakt Ratnappa Kumbhar Highschool'],
+                        typeSpeed: 50,
+                        backSpeed: 20,
+                        startDelay: 500,
+                        backDelay: 1500,
+                        loop: false,
+                      });
+                    });
+                    </script>
+                  <p>देशभक्त रत्नाप्पा कुंभार हायस्कूल आर.के. नगर पाचगावमध्ये आपले स्वागत आहे, ज्याची स्थापना केवळ शिक्षण प्रदान करण्यासाठीच नाही तर प्रत्येक विद्यार्थ्याला त्याच्या/तिच्या करिअरमध्ये शीर्षस्थानी पोहोचण्यासाठी सक्षम करण्यासाठी केली गेली आहे. मी प्रामाणिकपणे मानतो की खरे शिक्षण आत्मज्ञान, आत्मनियंत्रण आणि आत्मविश्वास या मौल्यवान गुणांचा शिकवण देते.</p>
+                  <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#info"
+                  class="btn btn-secondary">Explore</a></p>
+                </div>
               </div>
-
-              <!-- <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-secondary">Explore courses</a></p> -->
-
             </div>
           </div>
-
         </div>
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-
-  </div> <!-- /.untree_co-hero -->
+      </div>
+      <!-- Add more swiper-slide divs for additional images -->
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/20220814_085709.jpg');">
+      </div>
+      <div class="swiper-slide untree_co-hero overlay" style="background-image: url('images/HERO_IMAGES/HERO-1.jpg');">
+      </div>
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/IMG-20220506-WA0057.jpg');">
+      </div>
+      <div class="swiper-slide untree_co-hero overlay"
+        style="background-image: url('images/HERO_IMAGES/IMG-20240413-WA0037.jpg');">
+      </div>
+    </div>
+    <!-- Add Pagination if needed -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation if needed -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 
 
 
@@ -157,10 +182,11 @@
             <h2 class="line-bottom mb-4">President</h2>
           </div>
 
-          <p data-aos="fade-up" data-aos-delay="100">I feel, an institution can not be created single handedly or without any devotion or guidance. I must say that this was only possible due to team work of ‘Ghali Family’ under the esteemed officials.
-We plan to upgrade the existing school as per new requirements so that it may emerge as an
-ideal institution. We are solely dedicated to the welfare and better education to one and all so as to bring us at par the intellectual and educated sections of our society.
-We have been considering all aspects of child development and tried its best to enable children to meet the challenges of life. Not only this, we help children to build up their character and help them with moral education.
+          <p data-aos="fade-up" data-aos-delay="100">देशभक्त रत्नाप्पा कुंभार हायस्कूल आर के नगर पाचगावमध्ये आपले स्वागत आहे, ज्याची स्थापना केवळ शिक्षण देण्यासाठीच नाही तर प्रत्येक विद्यार्थ्याला त्याच्या/तिच्या करिअरमध्ये सर्वोच्च स्थानावर येण्यासाठी सक्षम करण्यासाठी करण्यात आली आहे. माझा ठाम विश्वास आहे की खरे शिक्षण आत्म-ज्ञान, आत्म-नियंत्रण आणि आत्मविश्वासाचे मौल्यवान गुण शिकवते.”
+मला असे वाटते की संस्था एकट्याने किंवा कोणत्याही भक्ती किंवा मार्गदर्शनाशिवाय निर्माण होऊ शकत नाही. आदरणीय अधिकाऱ्यांच्या नेतृत्वाखालील ‘घाळी परिवारा’च्या सांघिक कार्यामुळेच हे शक्य झाले आहे, असे मला म्हणायचे आहे.
+आम्ही विद्यमान शाळा नवीन आवश्यकतांनुसार श्रेणीसुधारित करण्याची योजना आखत आहोत जेणेकरून ती एक म्हणून उदयास येईल आदर्श संस्था. आमच्या समाजातील बौद्धिक आणि सुशिक्षित वर्गाच्या बरोबरीने आणण्यासाठी आम्ही सर्वांच्या कल्याणासाठी आणि उत्तम शिक्षणासाठी पूर्णपणे समर्पित आहोत.
+आम्ही मुलांच्या विकासाच्या सर्व पैलूंचा विचार करत आहोत आणि मुलांना जीवनातील आव्हाने पेलण्यास सक्षम करण्यासाठी सर्वतोपरी प्रयत्न केले आहेत. एवढेच नाही तर आम्ही मुलांना त्यांचे चारित्र्य घडवण्यासाठी आणि नैतिक शिक्षणासाठी मदत करतो.
+
 </p>
 
           <!-- <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
@@ -175,7 +201,7 @@ We have been considering all aspects of child development and tried its best to 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
           <figure class="img-wrap-2">
             <img
-              src="./images/President/PRESIDENT.JPEG"
+              src="https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2022/02/16072208/IAS-Vineet-Joshi-Know-about-IAS-Vineet-Joshi-who-once.jpeg"
               alt="Image" class="img-fluid img-size">
             <div class="dotted"></div>
           </figure>
@@ -195,19 +221,21 @@ We have been considering all aspects of child development and tried its best to 
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-6" data-aos="fade-up" data-aos-delay="0">
+       
+        <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <div class="staff text-center">
             <div class="mb-4"><img
-                src="https://th.bing.com/th/id/OIP.Mr8emaqK_6VcKG81Ng7JPQAAAA?w=308&h=180&c=7&r=0&o=5&pid=1.7"
+            src="../UI/images/VICE PRESIDENT/VICE PRESIDENT.jpeg"
+
                 alt="Image" class="img-fluid staff-img"></div>
             <div class="staff-body">
-              <h3 class="staff-name">Mrs.Arati Magdum</h3>
-              <span class="d-block position mb-4">Principle</span>
+              <h3 class="staff-name">Mr.Suraj Patil</h3>
+              <span class="d-block position mb-4">Vice-President</span>
               <p class="mb-4">
-              I Extend a warm welcome to you and your family. I am very proud to be the Principal of this wonderful School. It is a privilege for me to work with our students, our staff and our families to make our school they best it can be. My aim is to lead our school community to enable us to work together to achieve our goals.
-We aim to create a safe, nurturing yet challenging environment that is built on positive relationships, developing the whole student - emotionally, socially and academically. We care for and appreciate each of our students as the unique individuals that they are, each with distinct differing learning styles.
-We want each of our students to leave school with the values of respect, cooperation, persistence and striving for excellence underpinning all that they do.
-Our students develop responsibility for their own behavior and the choices they make, and also a communal responsibility to assist their peers to do the same. Our students become strong in self-esteem and personal expectation and develop a healthy and respectful tolerance.
+              आमचे उद्दिष्ट केवळ चांगले शैक्षणिक शिक्षण देणे हे नाही तर ते मूल्यावर आधारित आहे. जग हे खूप स्पर्धात्मक ठिकाण बनले आहे परंतु आमचे उद्दिष्ट विद्यार्थ्यांना केवळ इतरांशी स्पर्धा करण्यासाठी तयार करणे नाही तर प्रथम स्वतःला शोधणे हे आहे.
+
+
+भारतीय तत्त्वज्ञानानुसार, एखाद्या व्यक्तीला स्वतःबद्दल जितके अधिक माहिती असेल तितकी ती इतरांशी स्पर्धा करू शकेल. आम्ही शारीरिक आणि मानसिक कौशल्यांच्या विकासावर, एकाग्रतेची शक्ती वाढवण्यावर भरीव ताण देतो. उद्याच्या जगाच्या अपरिहार्य दबावांना तोंड देण्यासाठी मजबूत पात्रांच्या उभारणीवर भर दिला जातो. आम्ही नेहमीच उच्च ध्येय ठेवले आहे आणि कोणतेही प्रयत्न न करता आमचे ध्येय साध्य केले आहे. आमच्या अत्यंत प्रतिष्ठित संस्थेने आधीच पालक समुदायामध्ये विश्वास निर्माण केला आहे.
 
               </p>
               <!-- <div class="social">
@@ -218,29 +246,22 @@ Our students develop responsibility for their own behavior and the choices they 
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-6" data-aos="fade-up" data-aos-delay="0">
           <div class="staff text-center">
             <div class="mb-4"><img
-                src="https://th.bing.com/th/id/OIP.JK7_s12IJGwAdXgvtd33rAHaEK?w=265&h=180&c=7&r=0&o=5&pid=1.7"
+            src="../UI/images/principal/RAJAGONDA BABAGONDA PATIL.jpeg"
                 alt="Image" class="img-fluid staff-img"></div>
             <div class="staff-body">
-              <h3 class="staff-name">Mr.Suraj Patil</h3>
-              <span class="d-block position mb-4">Scretary</span>
-              <p class="mb-4">Scretary
-
-              Our aim is not to just provide a good academic education but one that is value based. The world has become a very competitive place but our aim is not to prepare students to merely compete with others but to discover themselves first.
-
-True to the Indian philosophy the more one knows about one self the better one can compete with others. We lay a substantial stress on the development of physical and mental skills, the enhancement of the power of concentration. Emphasis is laid on the building of strong characters to withstand the inevitable pressures of tomorrow's world. We have always aimed high and have achieved our goals without sparing any efforts. Our highly reputed institution has already instilled confidence in the parent’s community.
-
-Moreover, we are open to valuable suggestions from parents and experts through regular interaction with the faculty members, and strive to improve with an effective system of self-assessment. Our record spells out that for our mission the sky alone is the limit.
-
+              <h3 class="staff-name">Mr.Rajagonda Patil
+              </h3>
+              <span class="d-block position mb-4">Principle</span>
+              <p class="mb-4">
+              मी तुमचे आणि तुमच्या कुटुंबाचे हार्दिक स्वागत करतो. या अद्भुत शाळेचे प्राचार्य असल्याचा मला खूप अभिमान आहे. आमचे विद्यार्थी, आमचे कर्मचारी आणि आमच्या कुटुंबियांसोबत आमच्या शाळेला सर्वोत्तम बनवण्यासाठी काम करणे हा माझ्यासाठी विशेषाधिकार आहे. आमचे ध्येय साध्य करण्यासाठी आम्हाला एकत्र काम करण्यास सक्षम करण्यासाठी आमच्या शाळेच्या समुदायाचे नेतृत्व करणे हे माझे ध्येय आहे.
+सकारात्मक नातेसंबंधांवर आधारित एक सुरक्षित, पालनपोषण करणारे परंतु आव्हानात्मक वातावरण तयार करणे, संपूर्ण विद्यार्थ्याचा - भावनिक, सामाजिक आणि शैक्षणिकदृष्ट्या विकास करणे हे आमचे ध्येय आहे. आम्ही आमच्या प्रत्येक विद्यार्थ्याची काळजी घेतो आणि त्यांचे कौतुक करतो की ते अद्वितीय व्यक्ती आहेत, प्रत्येकाची वेगळी शिक्षण शैली आहे.
+आमची इच्छा आहे की आमच्या प्रत्येक विद्यार्थ्याने आदर, सहकार्य, चिकाटी या मूल्यांसह शाळा सोडावी आणि ते करत असलेल्या सर्व गोष्टींवर आधारित उत्कृष्टतेसाठी प्रयत्नशील राहावे.
+आमचे विद्यार्थी त्यांच्या स्वतःच्या वर्तनासाठी आणि त्यांनी केलेल्या निवडींसाठी जबाबदारी विकसित करतात आणि त्यांच्या समवयस्कांना ते करण्यास मदत करण्याची सांप्रदायिक जबाबदारी देखील विकसित करतात. आमचे विद्यार्थी स्वाभिमान आणि वैयक्तिक अपेक्षांमध्ये मजबूत होतात आणि निरोगी आणि आदरयुक्त सहिष्णुता विकसित करतात.
 
               </p>
-              <!-- <div class="social">
-                <a href="#" class="mx-2"><span class="icon-facebook"></span></a>
-                <a href="#" class="mx-2"><span class="icon-twitter"></span></a>
-                <a href="#" class="mx-2"><span class="icon-linkedin"></span></a>
-              </div> -->
             </div>
           </div>
         </div>
@@ -256,7 +277,12 @@ Moreover, we are open to valuable suggestions from parents and experts through r
       <div class="row justify-content-center mb-5">
         <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
           <h2 class="line-bottom text-center mb-4">Vision</h2>
-          <p>We aspire to transform each student into a multifaceted personality. We also aspire & desire that each of our students should set an example for others to follow, by the virtue of his positive deeds & optimistic approach towards life.</p>
+          <p>आम्ही प्रत्येक विद्यार्थ्याला बहुआयामी व्यक्तिमत्त्वात
+रूपांतरित करण्याची आकांक्षा बाळगतो. आपल्या
+प्रत्येक विद्यार्थ्याने त्याच्या सकारात्मक कृत्यांमुळे
+आणि जीवनाप्रती आशावादी दृष्टीकोन यांद्वारे
+इतरांसमोर एक आदर्श निर्माण करावा अशी आमची
+इच्छा आणि इच्छा आहे.</p>
         </div>
       </div>
     </div> <!-- /.container -->
@@ -269,11 +295,11 @@ Moreover, we are open to valuable suggestions from parents and experts through r
           <h2 class="line-bottom text-center mb-4">Our Objectives </h2>
           <p>
           <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
-            <li> To Provide stimulating environment to develop inquisitive mind and discover true potential.</li>
-            <li>To encourage students to develop a sense of social responsibility and responsibility towards the environment.</li>
-            <li>To create awareness about maintaining good physical and mental health.</li>
-            <li>To enhance the quality of teaching and learning by means of innovative practices and learning edge technology.</li>
-            <li>To help grow grit and resilience in every individual.</li>
+            <li>जिज्ञासू मन विकसित करण्यासाठी आणि खरी क्षमता शोधण्यासाठी उत्तेजक वातावरण प्रदान करणे.</li>
+            <li> विद्यार्थ्यांना पर्यावरणाप्रती सामाजिक जबाबदारी आणि जबाबदारीची भावना विकसित करण्यास प्रोत्साहित करणे.</li>
+            <li>चांगले शारीरिक आणि मानसिक आरोग्य राखण्यासाठी जागरूकता निर्माण करणे.</li>
+            <li> नवनवीन पद्धती आणि शिक्षण तंत्रज्ञानाच्या माध्यमातून शिकवण्याची आणि शिकण्याची गुणवत्ता वाढवणे.</li>
+            <li>प्रत्येक व्यक्तीमध्ये हिंमत आणि लवचिकता वाढण्यास मदत करणे.</li>
           </ul>  
           
 </p>
@@ -294,8 +320,12 @@ Moreover, we are open to valuable suggestions from parents and experts through r
         <div class="col-lg-3 mr-auto">
           <div class="widget">
             <h3>About Us<span class="text-primary">.</span> </h3>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts.</p>
+            <p>We aspire to transform each student into a
+multifaceted personality. We also aspire &amp;
+desire that each of our students should set an
+example for others to follow, by the virtue of
+his positive deeds &amp; optimistic approach
+towards life</p>
           </div> <!-- /.widget -->
           <div class="widget">
             <h3>Connect</h3>
@@ -304,8 +334,6 @@ Moreover, we are open to valuable suggestions from parents and experts through r
               <li><a href="#"><span class="icon-twitter"></span></a></li>
               <li><a href="#"><span class="icon-facebook"></span></a></li>
               <li><a href="#"><span class="icon-linkedin"></span></a></li>
-              <li><a href="#"><span class="icon-pinterest"></span></a></li>
-              <li><a href="#"><span class="icon-dribbble"></span></a></li>
             </ul>
           </div> <!-- /.widget -->
         </div> <!-- /.col-lg-3 -->
@@ -316,8 +344,8 @@ Moreover, we are open to valuable suggestions from parents and experts through r
             <h3>Contact</h3>
             <address>Deshbhakt Ratnappa Kumbhar Highschool, R. K. Nagar</address>
             <ul class="list-unstyled links mb-4">
-              <li><a href="tel://11234567890">9421175728</a></li>
-              <li><a href="tel://11234567890">9421175728</a></li>
+              <li><a href="tel://11234567890">+91-9421175728</a></li>
+              <li><a href="tel://11234567890">+91-9421175728</a></li>
               <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
             </ul>
           </div> <!-- /.widget -->
@@ -353,6 +381,37 @@ Moreover, we are open to valuable suggestions from parents and experts through r
   <script src="js/jquery.sticky.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/custom.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+      });
+
+      var typed = new Typed('#typed-text', {
+        strings: ['Deshbhakt Ratnappa Kumbhar Highschool'],
+        typeSpeed: 50,
+        backSpeed: 20,
+        startDelay: 500,
+        backDelay: 1500,
+        loop: false,
+      });
+    });
+  </script>
 
 </body>
 

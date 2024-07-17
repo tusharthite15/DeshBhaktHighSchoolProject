@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2024 at 04:12 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Jul 16, 2024 at 06:44 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -91,6 +91,21 @@ CREATE TABLE `gallery` (
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `image`) VALUES
+(3, 'IMG-20220615-WA0034.jpg'),
+(4, '20220626_094909.jpg'),
+(5, '20230108_135947.jpg'),
+(6, 'IMG-20220813-WA0130.jpg'),
+(7, '20221010_142342.jpg'),
+(8, '20230102_162542.jpg'),
+(9, '20230923_094410.jpg'),
+(10, '20221010_142342.jpg'),
+(11, '20220626_094439.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -128,6 +143,33 @@ INSERT INTO `news` (`id`, `heading`, `date`, `description`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `non_teaching_staff`
+--
+
+CREATE TABLE `non_teaching_staff` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `position` varchar(100) NOT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
+  `qualification` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `non_teaching_staff`
+--
+
+INSERT INTO `non_teaching_staff` (`id`, `name`, `position`, `image_url`, `qualification`) VALUES
+(1, 'DILIP SADASHIV SAGAONKAR', 'SHIPAI', '../UI/images/TEACHING/1721074732_DILIP SADASHIV SAGAONKAR.JPG', ''),
+(2, 'SADASHIV SHIVAPPA AURANALE', 'laboratory attendant', '../UI/images/TEACHING/1721074969_SADASHIV SHIVAPPA AURANALE.jpg', '12th'),
+(3, 'SUJATA AMAR PATIL', 'SHIPAI', '../UI/images/TEACHING/1721075025_SUJATA AMAR PATIL.jpeg', '12th'),
+(4, 'SHIVAJI SADASHIV KORAVI', 'SHIPAI', '../UI/images/TEACHING/1721075054_SHIVAJI SADASHIV KORAVI.jpeg', '12th'),
+(5, 'SUHAS SHIVAJIRAO CHAVHAN', 'Laboratory Assistant', '../UI/images/TEACHING/1721075105_SUHAS SHIVAJIRAO CHAVHAN.jpeg', '(M. A, B. Ed)'),
+(6, 'APPASO KALLAPPA TELI', 'Naik Sepai', '../UI/images/TEACHING/1721075171_APPASO KALLAPPA TELI.JPG', '12th'),
+(7, 'VINAYAK RANAKU KAMBLE', 'senior clerk', '../UI/images/TEACHING/1721075214_VINAYAK RANAKU KAMBLE.jpg', '(M. A, B. Ed)');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `student`
 --
 
@@ -144,6 +186,42 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`id`, `Name`, `Email`, `Password`) VALUES
 (4, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teaching_staff`
+--
+
+CREATE TABLE `teaching_staff` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `position` varchar(100) NOT NULL,
+  `qualification` text DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `teaching_staff`
+--
+
+INSERT INTO `teaching_staff` (`id`, `name`, `position`, `qualification`, `image_url`) VALUES
+(10, 'RAJAGONDA BABAGONDA PATIL', 'PRINCIPAL', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073761_RAJAGONDA BABAGONDA PATIL.jpeg'),
+(11, 'VARSHA PRAKASH BIRJE', 'SUPERVISOR', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073799_VARSHA PRAKASH BIRJE.JPG'),
+(12, 'SHARAD MAHADEV GANGADHARE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073857_SHARAD MAHADEV GANGADHARE.jpg'),
+(13, 'JYOTI BABASAHEB SHINDE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073878_JYOTI BABASAHEB SHINDE.jpg'),
+(14, 'KAVITA SACHIN MALI', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073913_KAVITA SACHIN MALI.jpeg'),
+(15, 'KISAN POPAT KUWAR', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073936_KISAN POPAT KUWAR.jpeg'),
+(16, 'PRATIBHA SANJAY KHEDAKAR', 'TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073961_PRATIBHA SANJAY KHEDAKAR.jpeg'),
+(17, 'PRIYADARSHANI RAVINDRA MANE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721073982_PRIYADARSHANI RAVINDRA MANE.JPG'),
+(18, 'RAJIV KISAN MUNDE ', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721074012_RAJIV KISAN MUNDE .jpg'),
+(19, 'SANDHYA RENUKADAS KULKARNI', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721074045_SANDHYA RENUKADAS KULKARNI.JPG'),
+(20, 'SANJAY BHIMGONDA MUDDANNA', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721074072_SANJAY BHIMGONDA MUDDANNA.JPG'),
+(21, 'SUJATA SUBHASH BHOSALE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721074107_SUJATA SUBHASH BHOSALE.JPG'),
+(22, 'SUNITA RAVINDRA MOTHE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721074140_SUNITA RAVINDRA MOTHE.JPG'),
+(24, 'SUNITA SANDEEP KALKHAMB', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721074320_SUNITA SANDEEP KALKHAMB.JPG'),
+(25, 'TUSHAR TANAJI THITE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721104988_sk.jpg'),
+(26, 'TUSHAR THITE', 'ASSISTANT TEACHER', '(M. A, B. Ed)', '../UI/images/TEACHING/1721105022_IMG_9897.JPG');
 
 --
 -- Indexes for dumped tables
@@ -180,9 +258,21 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `non_teaching_staff`
+--
+ALTER TABLE `non_teaching_staff`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teaching_staff`
+--
+ALTER TABLE `teaching_staff`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -211,7 +301,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -220,10 +310,22 @@ ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
+-- AUTO_INCREMENT for table `non_teaching_staff`
+--
+ALTER TABLE `non_teaching_staff`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `teaching_staff`
+--
+ALTER TABLE `teaching_staff`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

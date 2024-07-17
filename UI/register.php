@@ -215,7 +215,7 @@ if(mysqli_num_rows($select_contact) > 0){
           <form action="" class="form-box registerbox" method="POST">
           
           <div class="button-container">
-  <button class="btn1 btn-primary"><a href="register.php">Student</a></button>
+  <button class="btn1 btn-primary">Student</button>
   <button class="btn1 btn-primary"><a href="admin_login.php">Admin</a></button>
 </div>
 
