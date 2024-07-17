@@ -182,7 +182,11 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
             <li class="active"><a href="news.php">News</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="about.php">About</a></li>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 6e9d523 (achivement+page removed)
             <!-- <li><a href="achievements.html">Achievements</a></li> -->
             <li><a href="contact.php">Contact</a></li>
           </ul>
