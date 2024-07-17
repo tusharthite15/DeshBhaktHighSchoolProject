@@ -57,6 +57,7 @@ if(isset($message)){
 
 ?>
 
+
 <header class=header>
         <div class="flex">
             <a href="admin.php"class="logo">Desh Bhakt High School</a>
@@ -65,12 +66,12 @@ if(isset($message)){
                     <a href="admin_news.php">Add News</a>
                     <a href="admin_achievements.php">Add Achievements</a>
                     <a href="admin_contact.php">Add Contacts</a>
+                    <a href="admin_staff.php">Add Staff</a>
                     <a href="admin_feedback.php">Feedback</a>
                     <a href="../UI/index.php">Logout</a>
             </nav>
         </div>
     </header>
-
 
     <div class="containeer">
         <section>
