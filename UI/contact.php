@@ -26,6 +26,10 @@ if(isset($_POST['add_feedback'])){
 <!doctype html>
 <html lang="en">
 <head>
+<script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="xyz123">
+</script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
@@ -118,7 +122,6 @@ if(mysqli_num_rows($select_contact) > 0){
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="about.php">About</a></li>
             
-            <li><a href="achievements.php">Achievements</a></li>
             <li class="active"><a href="contact.php">Contact</a></li>
           </ul>
 
@@ -275,52 +278,67 @@ if(mysqli_num_rows($select_contact) > 0){
   <div class="site-footer">
 
 
-    <div class="container">
+<div class="container">
 
-      <div class="row">
-        <div class="col-lg-3 mr-auto">
-          <div class="widget">
-            <h3>About Us<span class="text-primary">.</span> </h3>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div> <!-- /.widget -->
-          <div class="widget">
-            <h3>Connect</h3>
-            <ul class="list-unstyled social">
-              <li><a href="#"><span class="icon-instagram"></span></a></li>
-              <li><a href="#"><span class="icon-twitter"></span></a></li>
-              <li><a href="#"><span class="icon-facebook"></span></a></li>
-              <li><a href="#"><span class="icon-linkedin"></span></a></li>
-              <li><a href="#"><span class="icon-pinterest"></span></a></li>
-              <li><a href="#"><span class="icon-dribbble"></span></a></li>
-            </ul>
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
+  <div class="row">
+    <div class="col-lg-3 mr-auto">
+      <div class="fb-page" data-href="https://www.facebook.com/dypcetkolhapur/" data-tabs="timeline"
+        data-width="400px" data-height="450px" data-small-header="false" data-adapt-container-width="true"
+        data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/YourPageURL" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/dypcetkolhapur/">dypcetkolhapur</a>
+        </blockquote>
+      </div>
+    </div> <!-- /.col-lg-3 -->
 
-        <div class="col-lg-3">
-          <div class="widget">
-            <h3>Contact</h3>
-            <address>Deshbhakt Ratnappa Kumbhar Highschool, R. K. Nagar</address>
-            <ul class="list-unstyled links mb-4">
-              <li><a href="tel://11234567890">9421175728</a></li>
-              <li><a href="tel://11234567890">9421175728</a></li>
-              <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
-            </ul>
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
-
-      </div> <!-- /.row -->
-
-    
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <p>Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
-            by <a href="#">Praramb</a> Developmet Cell - DYPCET<a href="#"></a>
+    <div class="col-lg-3">
+      <div class="col-lg-3">
+        <div class="widget">
+          <h3 style="font-size: 1rem;white-space: nowrap;">Office Timing:</h3>
+          <ul class="list-unstyled links mb-4" style:"whi">
+            <li><strong>Monday-Friday:</strong> 9:30am to 5:00pm</li>
+            <li><strong>Saturday:</strong> 9:30am to 12:00pm</li>
+            <li><strong>Sunday:</strong> Closed</li>
+          </ul>
         </div>
       </div>
-    </div> <!-- /.container -->
-  </div>  <!-- /.site-footer -->
+
+    </div>
+
+    <div class="col-lg-3">
+
+      <div class="widget">
+        <h3>Contact:</h3>
+        <address>Deshbhakt Ratnappa Kumbhar Highschool, Ratnappa Kumbhar Nagar, Kolhapur, Maharashtra 416013
+        </address>
+        <ul class="list-unstyled links mb-4">
+          <li><a href="tel:+919764548537">Sharad Gangadhare: +919764548537</a></li>
+          <li><a href="tel:+917588251617">Ashwajeet Kamble: +917588251617</a></li>
+          <li><a href="mailto:dbrkschoolkop@gmail.com">dbrkschoolkop@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h3>Connect with us</h3>
+        <ul class="list-unstyled social">
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-linkedin"></span></a></li>
+        </ul>
+      </div> <!-- /.widget -->
+    </div>
+  </div> <!-- /.row -->
+
+
+  <div class="row mt-5">
+    <div class="col-12 text-center">
+      <p>Copyright &copy;
+        <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
+        by <a href="#">Praramb</a> Developmet Cell - DYPCET<a href="#"></a>
+    </div>
+  </div>
+</div> <!-- /.container -->
+</div> <!-- /.site-footer -->
 
     <div id="overlayer"></div>
     <div class="loader">

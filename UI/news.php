@@ -1,8 +1,7 @@
 <?php
 @include 'config.php';
 
-// Define how many results you want per page
-$results_per_page = 5; 
+$results_per_page = 6;
 
 // Find out the number of results stored in database
 $result = mysqli_query($link, "SELECT COUNT(id) AS total FROM `news`");
@@ -14,9 +13,9 @@ $total_pages = ceil($total_results / $results_per_page);
 
 // Determine which page number visitor is currently on
 if (!isset($_GET['page'])) {
-    $page = 1;
+  $page = 1;
 } else {
-    $page = $_GET['page'];
+  $page = $_GET['page'];
 }
 
 // Determine the SQL LIMIT starting number for the results on the displaying page
@@ -53,6 +52,10 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
+    nonce="xyz123">
+    </script>
+
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -182,11 +185,7 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
             <li class="active"><a href="news.php">News</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="about.php">About</a></li>
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 6e9d523 (achivement+page removed)
             <!-- <li><a href="achievements.html">Achievements</a></li> -->
             <li><a href="contact.php">Contact</a></li>
           </ul>
@@ -265,9 +264,9 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
       <div class="row align-items-stretch">
 
 
+        <!-- Use the paginated results here -->
         <?php
         $image_base_path = "../Admin/image/news/";
-        $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC");
         if (mysqli_num_rows($select_news) > 0) {
           while ($fetch_news = mysqli_fetch_assoc($select_news)) {
             $image_path = $image_base_path . $fetch_news['image'];
@@ -279,18 +278,16 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
                 </figure>
                 <div class="media-h-body">
                   <h2 class="mb-3"><a href="#"><?php echo $fetch_news['heading']; ?></a></h2>
-                  <div class="meta "><span class="icon-calendar mr-2"></span><span><?php echo $fetch_news['date']; ?></span>
+                  <div class="meta"><span class="icon-calendar mr-2"></span><span><?php echo $fetch_news['date']; ?></span>
                   </div>
                   <p><?php echo $fetch_news['description']; ?></p>
                 </div>
               </div>
             </div>
-
             <?php
           }
         }
         ?>
-
         <!-- Modal -->
         <div id="modal" class="modal">
           <span class="close" onclick="closeModal()">&times;</span>
@@ -303,14 +300,18 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
       <div class="row mt-5">
         <div class="col-12 text-center">
           <ul class="list-unstyled custom-pagination">
-            <li><a href="news.php?page=1">1</a></li>
-            <li><a href="news.php?page=2">2</a></li>
-            <li><a href="news.php?page=3">3</a></li>
-            <li><a href="news.php?page=4">4</a></li>
+            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+              <li class="<?php if ($page == $i) {
+                echo 'active';
+              } ?>">
+                <a href="news.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+              </li>
+            <?php endfor; ?>
           </ul>
         </div>
       </div>
-1
+
+      1
     </div>
   </div>
   </div> <!-- /.untree_co-section -->
@@ -322,35 +323,51 @@ $select_news = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMI
 
       <div class="row">
         <div class="col-lg-3 mr-auto">
+          <div class="fb-page" data-href="https://www.facebook.com/dypcetkolhapur/" data-tabs="timeline"
+            data-width="400px" data-height="450px" data-small-header="false" data-adapt-container-width="true"
+            data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/YourPageURL" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/dypcetkolhapur/">dypcetkolhapur</a>
+            </blockquote>
+          </div>
+        </div> <!-- /.col-lg-3 -->
+
+        <div class="col-lg-3">
+          <div class="col-lg-3">
+            <div class="widget">
+              <h3 style="font-size: 1rem;white-space: nowrap;">Office Timing:</h3>
+              <ul class="list-unstyled links mb-4" style:"whi">
+                <li><strong>Monday-Friday:</strong> 9:30am to 5:00pm</li>
+                <li><strong>Saturday:</strong> 9:30am to 12:00pm</li>
+                <li><strong>Sunday:</strong> Closed</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
           <div class="widget">
-            <h3>About Us<span class="text-primary">.</span> </h3>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div> <!-- /.widget -->
+            <h3>Contact:</h3>
+            <address>Deshbhakt Ratnappa Kumbhar Highschool, Ratnappa Kumbhar Nagar, Kolhapur, Maharashtra 416013
+            </address>
+            <ul class="list-unstyled links mb-4">
+              <li><a href="tel:+919764548537">Sharad Gangadhare: +919764548537</a></li>
+              <li><a href="tel:+917588251617">Ashwajeet Kamble: +917588251617</a></li>
+              <li><a href="mailto:dbrkschoolkop@gmail.com">dbrkschoolkop@gmail.com</a></li>
+            </ul>
+          </div>
           <div class="widget">
-            <h3>Connect</h3>
+            <h3>Connect with us</h3>
             <ul class="list-unstyled social">
               <li><a href="#"><span class="icon-instagram"></span></a></li>
               <li><a href="#"><span class="icon-twitter"></span></a></li>
               <li><a href="#"><span class="icon-facebook"></span></a></li>
               <li><a href="#"><span class="icon-linkedin"></span></a></li>
-              <li><a href="#"><span class="icon-pinterest"></span></a></li>
-              <li><a href="#"><span class="icon-dribbble"></span></a></li>
             </ul>
           </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
-        <div class="col-lg-3">
-          <div class="widget">
-            <h3>Contact</h3>
-            <address>Deshbhakt Ratnappa Kumbhar Highschool, R. K. Nagar</address>
-            <ul class="list-unstyled links mb-4">
-              <li><a href="tel://11234567890">9421175728</a></li>
-              <li><a href="tel://11234567890">9421175728</a></li>
-              <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
-            </ul>
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
-
+        </div>
       </div> <!-- /.row -->
 
 
