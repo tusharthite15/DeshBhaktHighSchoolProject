@@ -69,7 +69,7 @@
           if (mysqli_num_rows($select_contact) > 0) {
             while ($fetch_contact = mysqli_fetch_assoc($select_contact)) {
               ?>
-              <div class="col-6 col-lg-9">
+              <div class="col-6 col-lg-9">  
                 <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span
                     class="d-none d-lg-inline-block"><?php echo $fetch_contact['contact']; ?></span></a>
                 <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span
@@ -190,11 +190,12 @@
           </div>
 
           <p data-aos="fade-up" data-aos-delay="100">
-            Welcome to Deshbhakt Ratnappa Kumbhar High School R K Nagar Pachgaon , that has been established not only to
-            provide education but also to enable each student to emerge on the top his/her career. I strongly believe
-            that true education teaches the valuable virtues of self-knowledge, self-control and self-confidence”.
+            <!-- Welcome to Deshbhakt Ratnappa Kumbhar High School R K Nagar Pachgaon , that has been established not only to
+            provide education but also to enable each student to emerge on the top his/her career. I strongly believe 
+            that true education teaches the valuable virtues of self-knowledge, self-control and self-confidence”. -->
 
           </p>
+          <p>देशभक्त रत्नाप्पा कुंभार हायस्कूल आर.के. नगर पाचगावमध्ये आपले स्वागत आहे, ज्याची स्थापना केवळ शिक्षण प्रदान करण्यासाठीच नाही तर प्रत्येक विद्यार्थ्याला त्याच्या/तिच्या करिअरमध्ये शीर्षस्थानी पोहोचण्यासाठी सक्षम करण्यासाठी केली गेली आहे. मी प्रामाणिकपणे मानतो की खरे शिक्षण आत्मज्ञान, आत्मनियंत्रण आणि आत्मविश्वास या मौल्यवान गुणांचा शिकवण देते.</p>
 
           <!-- <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
             <li>Behind the word Mountains.</li>
