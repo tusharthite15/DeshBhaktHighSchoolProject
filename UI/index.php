@@ -36,6 +36,9 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous"> -->
@@ -44,11 +47,67 @@
   <title>DeshBhakt Ratnappa Kumbhar Highschool</title>
 </head>
 <style>
-  @media (max-width: 991px) {
-    .site-menu-toggle {
-      display: block !important;
-    }
+ 
+ html, body {
+  overflow-x: hidden;
+}
+
+ .site-mobile-menu {
+  position: fixed;
+  right: 0;
+  z-index: 20000;
+  width: 300px;
+  padding-top: 20px;
+  background: #ffffff;
+  height: calc(100vh);
+  transform: translateX(100%); /* Initially hidden */
+  transition: 0.8s all cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-open .site-mobile-menu {
+  transform: translateX(0); /* Bring it into view */
+}
+  
+  /* Box hover effect */
+.box {
+  /* background-color: rebeccapurple; */
+  border-radius: 10px;
+  width: 100%;
+  border: #ffd700;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.7s ease, background-color 0.7s ease;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  /* background-color: darkorchid; */
+}
+
+/* Icon hover animation */
+.box .feature span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 15px;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+/* Add animation for icons when box is hovered */
+.box:hover .feature span {
+  color: #ffd700; /* Gold color */
+  transform: rotate(360deg);
+}
+
+/* Keyframe animation for box hover */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 </style>
 
 <body>
@@ -120,10 +179,10 @@
           <a href="register.php" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll
             Now</a>
 
-          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
-            data-toggle="collapse" data-target="#main-navbar">
-            <span></span>
-          </a>
+            <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
+
 
         </div>
       </div>
@@ -222,156 +281,143 @@
   </div>
 
   <div class="untree_co-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
-          <h2 class="line-bottom text-center mb-4">We Have Best Education</h2>
-          <p>Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the
-            blind texts.</p>
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+        <h2 class="line-bottom text-center mb-4">Why Choose Us</h2>
+        <p>We provide all kinds of facilities in each field to ensure a comprehensive educational experience.</p>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature">
+          <span class="uil uil-desktop"></span>
+          <h3>Computer Lab</h3>
+          <p>Computer lab with latest computers and separate computers for each student.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature">
-            <span class="uil uil-music"></span>
-            <h3>Music Class</h3>
-            <p>Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature">
-            <span class="uil uil-calculator-alt"></span>
-            <h3>Math Class</h3>
-            <p>Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature">
-            <span class="uil uil-book-open"></span>
-            <h3>English Class</h3>
-            <p>Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay=100">
-          <div class="feature">
-            <span class="uil uil-book-alt"></span>
-            <h3>Reading for Kids</h3>
-            <p>Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature">
-            <span class="uil uil-history"></span>
-            <h3>History Class</h3>
-            <p>Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature">
-            <span class="uil uil-headphones"></span>
-            <h3>Music</h3>
-            <p>Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the
-              blind texts.</p>
-          </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature">
+          <span class="uil uil-book"></span>
+          <h3>Standard Education</h3>
+          <p>Our teacher-student ratio is as per international standards.</p>
         </div>
       </div>
-    </div> <!-- /.container -->
-  </div> <!-- /.untree_co-section -->
-
-  <div class="untree_co-section bg-light">
-    <div class="container">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature">
+          <span class="uil uil-basketball"></span>
+          <h3>Various Activities</h3>
+          <p>Indoor & outdoor games and various activities under the guidance of experts.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature">
+          <span class="uil uil-building"></span>
+          <h3>Facilities for Students</h3>
+          <p>Spacious, ultramodern building with well-equipped labs and a rich library.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="feature">
+          <span class="uil uil-bus"></span>
+          <h3>School Bus</h3>
+          <p>The school provides transportation facilities to students.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="feature">
+          <span class="uil uil-laptop"></span>
+          <h3>Digital Lab</h3>
+          <p>Our school provides a digital language lab for students.</p>
+        </div>
+      </div> -->
       <div class="row">
-        <div class="col-lg-7 text-center mx-auto">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature">
+          <span class="uil uil-desktop"></span>
+          <h3>Computer Lab</h3>
+          <p>Computer lab with latest computers and separate computers for each student.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature">
+          <span class="uil uil-book"></span>
+          <h3>Standard Education</h3>
+          <p>Our teacher-student ratio is as per international standards.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature">
+          <span class="uil uil-basketball"></span>
+          <h3>Various Activities</h3>
+          <p>Indoor & outdoor games and various activities under the guidance of experts.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature">
+          <span class="uil uil-building"></span>
+          <h3>Facilities for Students</h3>
+          <p>Spacious, ultramodern building with well-equipped labs and a rich library.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="500">
+        <div class="feature">
+          <span class="uil uil-bus"></span>
+          <h3>School Bus</h3>
+          <p>The school provides transportation facilities to students.</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="600">
+        <div class="feature">
+          <span class="uil uil-laptop"></span>
+          <h3>Digital Lab</h3>
+          <p>Our school provides a digital language lab for students.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div> <!-- /.container -->
+</div> <!-- /.untree_co-section -->
 
-          <h3 class="line-bottom mb-4">What parent said about DRKH</h3>
-          <div class="owl-carousel wide-slider-testimonial">
-            <div class="item">
-              <blockquote class="block-testimonial">
-
-                <p>
-                  &ldquo;I would like to thank DRKH for providing many
-                  different opportunities for my daughter to learn
-                  and grow at every step. I would like to show my appreciation
-                  to the teachers for their hard work and
-                  support. The way her teachers have helped to develop her
-                  personality, while at the same time
-                  inculcating self-discipline and respect towards others, is
-                  truly incredible. The way of teaching and
-                  interaction in the school is also commendable. Thank you INS
-                  for providing such an environment for the
-                  children to grow in their own way.&rdquo;</p>
-                <!-- <div class="author">
-                  <img src="images/person_1.jpg" alt="Free template by TemplateUX">
-                  <h3>John Doe</h3>
-                  <p class="position">CEO, Founder</p>
-                </div> -->
-              </blockquote>
-            </div>
-
-            <div class="item">
-              <blockquote class="block-testimonial">
-
-                <p>
-                  &ldquo;Deshbhakt Ratnappa Kumbhar Highschool is a wonderful
-                  school to send my child to. They have been amazing in
-                  everything I have needed assistance in. My daughter has
-                  excelled at this school. The teachers care about the
-                  children. The school community is rich with diversity and
-                  the school works hard for their students. Even in pandemic
-                  situation the teachers did their jobs with full efforts.
-                  This school has helped my child to cope in many different
-                  ways.&rdquo;</p>
-              </blockquote>
-            </div>
-
-            <div class="item">
-              <blockquote class="block-testimonial">
-
-                <p>
-                  &ldquo;We feel so fortunate to have our son's teachers as
-                  his mentors. He loves them and talks about
-                  them often. He is learning so much and great full beyond
-                  words. The way her teachers have helped to
-                  develop her personality, while at the same time inculcating
-                  self-discipline and respect towards
-                  others, is truly incredible.&rdquo;</p>
-
-              </blockquote>
-            </div>
+<div class="untree_co-section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 text-center mx-auto">
+        <h3 class="line-bottom mb-4">What Parents Say About DRKH</h3>
+        <div class="owl-carousel wide-slider-testimonial">
+          <div class="item">
+            <blockquote class="block-testimonial">
+              <p>&ldquo;I would like to thank DRKH for providing many different opportunities for my daughter to learn and grow at every step. I appreciate the teachers for their hard work and support. The way her teachers have helped to develop her personality, while also inculcating self-discipline and respect towards others, is truly incredible. The teaching and interaction in the school are commendable. Thank you DRKH for providing such an environment for the children to grow in their own way.&rdquo;</p>
+            </blockquote>
           </div>
-
+          <div class="item">
+            <blockquote class="block-testimonial">
+              <p>&ldquo;Deshbhakt Ratnappa Kumbhar Highschool is a wonderful school to send my child to. They have been amazing in everything I have needed assistance with. My daughter has excelled at this school. The teachers care about the children. The school community is rich with diversity and works hard for their students. Even during the pandemic, the teachers did their jobs with full effort. This school has helped my child cope in many different ways.&rdquo;</p>
+            </blockquote>
+          </div>
+          <div class="item">
+            <blockquote class="block-testimonial">
+              <!-- <p>&ldquo;We feel so fortunate to have our son's teachers as his mentors. He loves them and talks about them often. He is learning so much and is grateful beyond words. The way the teachers have helped to develop his personality, while also inculcating self-discipline and respect towards others, is truly incredible.&rdquo;</p> -->
+          <p>“आम्ही आमच्या मुलाच्या शिक्षकांना त्याचे मार्गदर्शक म्हणून मिळाल्याबद्दल खूप भाग्यवान आहोत. त्याला ते खूप आवडतात आणि तो त्यांच्याबद्दल नेहमी बोलत असतो. तो खूप काही शिकत आहे आणि शब्दांपलीकडे कृतज्ञ आहे. शिक्षकांनी त्याचे व्यक्तिमत्व घडवण्यास मदत केली आहे, तसेच आत्मशिस्त आणि इतरांविषयी आदर निर्माण केला आहे, जे खरंच अविश्वसनीय आहे.”</p>     
+               </blockquote>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="untree_co-section pt-0 bg-img overlay"
-    style="background-image: url('../UI/images/SCHOOL+WEBSITE/20220812_142527.jpg');">
-    <div class="container">
-      <div class="row align-items-center justify-content-center text-center">
-        <div class="col-lg-7">
-          <h2 class="text-white mb-3" data-aos="fade-up" data-aos-delay="0">Education for Tomorrow's Leaders</h2>
-          <p class="text-white h5 mb-4" data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains,
-            far from the countries Vokalia and Consonantia, there live the
-            blind texts.</p>
-          <p><a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">Enroll Now</a></p>
-        </div>
+<div class="untree_co-section pt-0 bg-img overlay" style="background-image: url('../UI/images/SCHOOL+WEBSITE/20220812_142527.jpg');">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col-lg-7">
+        <h2 class="text-white mb-3" data-aos="fade-up" data-aos-delay="0">Education for Tomorrow's Leaders</h2>
+        <p class="text-white h5 mb-4" data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <p><a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">Enroll Now</a></p>
       </div>
     </div>
-  </div> <!-- /.untree_co-section -->
+  </div>
+</div> <!-- /.untree_co-section -->
 
   <div class="untree_co-section">
     <div class="container">
@@ -460,70 +506,70 @@
   </div> <!-- /.untree_co-section -->
 
 
-  <div class="site-footer">
+   <div class="site-footer">
 
 
-<div class="container">
+    <div class="container">
 
-  <div class="row">
-    <div class="col-lg-3 mr-auto">
-      <div class="fb-page" data-href="https://www.facebook.com/dypcetkolhapur/" data-tabs="timeline"
-        data-width="400px" data-height="450px" data-small-header="false" data-adapt-container-width="true"
-        data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/YourPageURL" class="fb-xfbml-parse-ignore">
-          <a href="https://www.facebook.com/dypcetkolhapur/">dypcetkolhapur</a>
-        </blockquote>
-      </div>
-    </div> <!-- /.col-lg-3 -->
+      <div class="row">
+        <div class="col-lg-3 mr-auto">
+          <div class="fb-page" data-href="https://www.facebook.com/dypcetkolhapur/" data-tabs="timeline"
+            data-width="400px" data-height="450px" data-small-header="false" data-adapt-container-width="true"
+            data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/YourPageURL" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/dypcetkolhapur/">dypcetkolhapur</a>
+            </blockquote>
+          </div>
+        </div> <!-- /.col-lg-3 -->
 
-    <div class="col-lg-3">
-      <div class="col-lg-3">
-        <div class="widget">
-          <h3 style="font-size: 1rem;white-space: nowrap;">Office Timing:</h3>
-          <ul class="list-unstyled links mb-4" style:"whi">
-            <li><strong>Monday-Friday:</strong> 9:30am to 5:00pm</li>
-            <li><strong>Saturday:</strong> 9:30am to 12:00pm</li>
-            <li><strong>Sunday:</strong> Closed</li>
-          </ul>
+        <div class="col-lg-3">
+          <div class="col-lg-3">
+            <div class="widget">
+              <h3 style="font-size: 1rem;white-space: nowrap;">Office Timing:</h3>
+              <ul class="list-unstyled links mb-4" style:"whi">
+                <li><strong>Monday-Friday:</strong> 9:30am to 5:00pm</li>
+                <li><strong>Saturday:</strong> 9:30am to 12:00pm</li>
+                <li><strong>Sunday:</strong> Closed</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+          <div class="widget">
+            <h3>Contact:</h3>
+            <address>Deshbhakt Ratnappa Kumbhar Highschool, Ratnappa Kumbhar Nagar, Kolhapur, Maharashtra 416013
+            </address>
+            <ul class="list-unstyled links mb-4">
+              <li><a href="tel:+919764548537">Sharad Gangadhare: +919764548537</a></li>
+              <li><a href="tel:+917588251617">Ashwajeet Kamble: +917588251617</a></li>
+              <li><a href="mailto:dbrkschoolkop@gmail.com">dbrkschoolkop@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="widget">
+            <h3>Connect with us</h3>
+            <ul class="list-unstyled social">
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div>
+      </div> <!-- /.row -->
+
+
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
+            by <a href="#">Praramb</a> Developmet Cell - DYPCET<a href="#"></a>
         </div>
       </div>
-
-    </div>
-
-    <div class="col-lg-3">
-
-      <div class="widget">
-        <h3>Contact:</h3>
-        <address>Deshbhakt Ratnappa Kumbhar Highschool, Ratnappa Kumbhar Nagar, Kolhapur, Maharashtra 416013
-        </address>
-        <ul class="list-unstyled links mb-4">
-          <li><a href="tel:+919764548537">Sharad Gangadhare: +919764548537</a></li>
-          <li><a href="tel:+917588251617">Ashwajeet Kamble: +917588251617</a></li>
-          <li><a href="mailto:dbrkschoolkop@gmail.com">dbrkschoolkop@gmail.com</a></li>
-        </ul>
-      </div>
-      <div class="widget">
-        <h3>Connect with us</h3>
-        <ul class="list-unstyled social">
-          <li><a href="#"><span class="icon-instagram"></span></a></li>
-          <li><a href="#"><span class="icon-twitter"></span></a></li>
-          <li><a href="#"><span class="icon-facebook"></span></a></li>
-          <li><a href="#"><span class="icon-linkedin"></span></a></li>
-        </ul>
-      </div> <!-- /.widget -->
-    </div>
-  </div> <!-- /.row -->
-
-
-  <div class="row mt-5">
-    <div class="col-12 text-center">
-      <p>Copyright &copy;
-        <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
-        by <a href="#">Praramb</a> Developmet Cell - DYPCET<a href="#"></a>
-    </div>
-  </div>
-</div> <!-- /.container -->
-</div> <!-- /.site-footer -->
+    </div> <!-- /.container -->
+  </div> <!-- /.site-footer -->
 
   <div id="overlayer"></div>
   <div class="loader">
@@ -573,7 +619,30 @@
         loop: false,
       });
     });
+
+
+
+    
   </script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  const closeMenuIcon = document.querySelector('.site-mobile-menu-close'); // Close button
+  const menuToggleIcon = document.querySelector('.js-menu-toggle'); // Burger menu button
+  const body = document.querySelector('body');
+  
+  // Open the menu when burger icon is clicked
+  menuToggleIcon.addEventListener('click', function() {
+    body.classList.add('menu-open'); // Open the mobile menu
+  });
+  
+  // Close the menu when close button is clicked
+  closeMenuIcon.addEventListener('click', function() {
+    body.classList.remove('menu-open'); // Close the mobile menu
+  });
+});
+
+</script>
 
 </body>
 
